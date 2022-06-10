@@ -1,46 +1,46 @@
-@use "theme";
-@use "variables";
-@use "./mixins/responsive";
+@use 'theme';
+@use 'variables';
+@use './mixins/responsive';
 :root {
-    --primary-color: #{theme.$primary-color};
-    --body-background-color: #{theme.$body-bg-color};
-    --body-font-family: #{theme.$body-font-family};
-    --body-alt-font-family: #{theme.$body-alt-font-family};
-    --body-font-weight-regular: #{theme.$body-font-weight-regular};
-    --body-font-weight-bold: #{theme.$body-font-weight-bold};
-    --body-color: #{theme.$body-color};
-    --card-color: #{theme.$card-color};
-    --card-border-hover-color: #{theme.$card-border-hover-color};
-    --card-tag-bg: #{theme.$card-tag-bg};
+  --primary-color: #{theme.$primary-color};
+  --body-background-color: #{theme.$body-bg-color};
+  --body-font-family: #{theme.$body-font-family};
+  --body-alt-font-family: #{theme.$body-alt-font-family};
+  --body-font-weight-regular: #{theme.$body-font-weight-regular};
+  --body-font-weight-bold: #{theme.$body-font-weight-bold};
+  --body-color: #{theme.$body-color};
+  --card-color: #{theme.$card-color};
+  --card-border-hover-color: #{theme.$card-border-hover-color};
+  --card-tag-bg: #{theme.$card-tag-bg};
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    color: var(--body-color);
-    font-family: var(--body-font-family);
-    font-size: variables.$body-font-size;
-    background-color: var(--body-background-color);
-    -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  color: var(--body-color);
+  font-family: var(--body-font-family);
+  font-size: variables.$body-font-size;
+  background-color: var(--body-background-color);
+  -webkit-font-smoothing: antialiased;
 }
 
 button {
-    width: auto;
-    margin: 0;
-    padding: 0;
-    overflow: visible;
-    color: inherit;
-    font: inherit;
-    line-height: normal;
-    background: transparent;
-    border: none;
-    border: 0;
-    outline: none;
-    appearance: none;
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  background: transparent;
+  border: none;
+  border: 0;
+  outline: none;
+  appearance: none;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
 }
 
 h1,
@@ -49,44 +49,264 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
-    padding: 0;
-    font: inherit;
+  margin: 0;
+  padding: 0;
+  font: inherit;
 }
 
 *,
 ::after,
 ::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @include responsive.mobile-and-tablet() {
-    body {
-        font-size: 18px;
-    }
+  body {
+    font-size: 18px;
+  }
 }
 
-#okta-sign-in.auth-container.main-container {
-    $base-color: #202020;
-    background-color: $base-color;
-}
-
-// #okta-sign-in.auth-container .o-form-head {
-//     $okta-text-color: #ffff;
-//     color: $okta-text-color;
+// #okta-sign-in.auth-container.main-container {
+//     $base-color: #202020;
+//     // $okta-link-color: #ffff;
+//     // color: $okta-link-color;
+//     background-color: $base-color;
 // }
-// #okta-sign-in.auth-container a.link:link {
+
+// #okta-sign-in .o-form label {
 //     $okta-link-color: #ffff;
 //     color: $okta-link-color;
 // }
-#okta-sign-in * {
-    $okta-link-color: #ffff;
-    color: $okta-link-color;
+
+// #okta-sign-in.auth-container h2, #okta-sign-in.auth-container h3 {
+//     $okta-link-color: #ffff;
+//     color: $okta-link-color;
+// }
+
+// #okta-sign-in.auth-container .link:active, #okta-sign-in.auth-container .link:hover, #okta-sign-in.auth-container .link:link, #okta-sign-in.auth-container .link:visited{
+//     $okta-link-color: #ffff;
+//     color: $okta-link-color;
+// }
+
+// #okta-sign-in.auth-container .okta-form-subtitle {
+//     $okta-link-color: #ffff;
+//     color: $okta-link-color;
+// }
+
+// #okta-sign-in .focused-input, #okta-sign-in .link.help:focus, #okta-sign-in input[type=radio]:focus+label, #okta-sign-in input[type=text]:focus{
+//     box-shadow: none;
+// }
+
+// #okta-sign-in .o-form .infobox {
+//     $okta-button-color: #ffff;
+//     $okta-link-color: rgb(28, 28, 28);
+//     color: $okta-link-color;
+//     background-color: $okta-button-color;
+// }
+
+// #okta-sign-in.auth-container .button-primary {
+//     color: rgba(255, 255, 255, 0.7);
+//     background-color: rgba(0, 0, 0, 0.54);
+//     border: 1px solid rgba(255, 255, 255, 0.34);
+//     border-radius: 4px;
+//     transition: border 0.2s ease;
+// }
+
+// #okta-sign-in.auth-container .button-primary:hover {
+//     color: rgba(255, 255, 255, 0.7);
+//     background-color: rgba(0, 0, 0, 0.54);
+//     border: 1px solid rgba(255, 255, 255, 0.34);
+//     border-radius: 4px;
+//     transition: border 0.2s ease;
+// }
+
+// #okta-sign-in .focused-input {
+//     $okta-button-border: 1px solid rgba(255, 255, 255);
+//     border: $okta-button-border;
+//     box-shadow: none;
+// }
+
+// #okta-sign-in.auth-container input[type=button], #okta-sign-in.auth-container input[type=submit]:focus{
+//     $okta-button-color: #ffff;
+//     $okta-link-color: rgb(28, 28, 28);
+//     $okta-button-border: 1px solid rgba(255, 255, 255);
+//     text-decoration: none;
+//     background: $okta-link-color;
+//     background-color: transparent;
+//     background-image: none;
+//     border: $okta-button-border;
+//     border-color: transparent;
+//     box-shadow: none;
+// }
+
+// #okta-sign-in.auth-container .button-primary.link-button{
+//     $okta-button-color: #ffff;
+//     $okta-link-color: rgb(28, 28, 28);
+//     $okta-button-border: 1px solid rgba(255, 255, 255);
+//     text-decoration: none;
+//     background: $okta-link-color;
+//     background-color: transparent;
+//     background-image: none;
+//     border: $okta-button-border;
+//     border-color: transparent;
+//     box-shadow: none;
+// }
+
+// #okta-sign-in.auth-container .button-primary:active, #okta-sign-in.auth-container .button-primary:focus, #okta-sign-in.auth-container .button-primary:hover {
+//     $okta-button-color: #ffff;
+//     $okta-link-color: rgb(28, 28, 28);
+//     $okta-button-border: 1px solid rgba(255, 255, 255);
+//     text-decoration: none;
+//     background: $okta-link-color;
+//     background-color: transparent;
+//     background-image: none;
+//     border: $okta-button-border;
+//     border-radius: 4px;
+//     outline: none;
+//     cursor: pointer;
+//    }
+
+// -------------------------------------------------------------------------------------------------
+$okta-text-color: #ffff;
+$okta-bg-color: #202020;
+$okta-error-color: #e34843;
+#okta-sign-in.auth-container.main-container {
+  color: $okta-text-color;
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: $okta-bg-color;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+#okta-sign-in.auth-container .okta-sign-in-header {
+  padding: 14px;
+  border-bottom-color: transparent;
+}
+
+#okta-sign-in .auth-content {
+  padding: 10px;
+}
+
+#okta-sign-in.auth-container h2,
+#okta-sign-in.auth-container h3 {
+  color: $okta-text-color;
+  font-weight: 700;
+  font-size: x-large;
+  text-align: left;
+}
+
+#okta-sign-in.auth-container .okta-form-label {
+  color: $okta-text-color;
+  font-weight: 700;
+}
+
+#okta-sign-in.auth-container .okta-form-input-field {
+  background-color: rgba(0, 0, 0, 0.54);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+#okta-sign-in.auth-container .okta-form-input-field:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255);
+}
+
+#okta-sign-in .focused-input,
+#okta-sign-in .link.help:focus,
+#okta-sign-in input[type='radio']:focus + label,
+#okta-sign-in input[type='text']:focus {
+  box-shadow: none;
+}
+
+#okta-sign-in.auth-container .okta-form-input-field.focused-input {
+  border-color: rgba(255, 255, 255);
+}
+
+#okta-sign-in.auth-container .okta-form-input-field input {
+  color: $okta-text-color;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+#okta-sign-in .o-form .input-fix,
+#okta-sign-in .o-form .textarea-fix {
+  height: 48px;
+}
+
+#okta-sign-in .o-form .o-form-label,
+#okta-sign-in .o-form input,
+#okta-sign-in .o-form label,
+#okta-sign-in .o-form textarea {
+  //   font-weight: 700;
+  font-size: 18px;
+}
+
+#okta-sign-in .o-form .input-fix input,
+#okta-sign-in .o-form .textarea-fix input {
+  font-size: 16px;
 }
 
 #okta-sign-in.auth-container .button-primary {
-    $okta-button-color: #ffff;
-    $okta-link-color: rgb(28, 28, 28);
-    color: $okta-link-color;
-    background: $okta-button-color;
+  height: 36px;
+  color: $okta-bg-color;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 32px;
+  background: none;
+  background-color: $okta-text-color;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: border 0.2s ease;
+  //   transition: background-color 0.1s ease, transform 0.1s ease;
+}
+
+#okta-sign-in.auth-container .button-primary:active,
+#okta-sign-in.auth-container .button-primary:focus,
+#okta-sign-in.auth-container .button-primary:hover {
+  background: none;
+  background-color: $okta-text-color;
+  border-radius: 4px;
+  transform: scale(1.04);
+}
+
+#okta-sign-in.auth-container .button.button-primary.link-button-disabled {
+  color: $okta-bg-color;
+  background-color: $okta-text-color;
+  border-color: $okta-bg-color;
+}
+
+#okta-sign-in.auth-container input[type='button'],
+#okta-sign-in.auth-container input[type='submit'] {
+  font-family: Trebuchet MS, Helvetica, Arial, sans-serif;
+}
+
+#okta-sign-in.auth-container input[type='button']:focus,
+#okta-sign-in.auth-container input[type='submit']:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+#okta-sign-in .o-form-has-errors .infobox-error {
+  background-color: $okta-error-color;
+}
+
+#okta-sign-in .infobox,
+#okta-sign-in .infobox-md {
+  border: 1px solid $okta-error-color;
+  border-radius: 3px;
+}
+
+#okta-sign-in.auth-container .link:active,
+#okta-sign-in.auth-container .link:hover,
+#okta-sign-in.auth-container .link:link,
+#okta-sign-in.auth-container .link:visited {
+  color: $okta-text-color;
+}
+
+#okta-sign-in.auth-container .okta-form-subtitle {
+  color: $okta-text-color;
+}
+
+#okta-sign-in .o-form-head + .o-form-explain {
+  text-align: left;
 }

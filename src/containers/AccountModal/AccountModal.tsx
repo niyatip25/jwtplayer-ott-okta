@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Redirect, useHistory } from 'react-router';
 import shallow from 'zustand/shallow';
 
+import OktaSignIn from '@okta/okta-signin-widget';
+import { useOktaAuth } from '@okta/okta-react';
+
 import Dialog from '../../components/Dialog/Dialog';
 import useQueryParam from '../../hooks/useQueryParam';
 import { addQueryParam, removeQueryParam } from '../../utils/history';
@@ -23,8 +26,6 @@ import RenewSubscription from './forms/RenewSubscription';
 
 import EditPassword from './forms/EditPassword';
 
-import OktaSignIn from '@okta/okta-signin-widget';
-import { useOktaAuth } from '@okta/okta-react';
 
 const PUBLIC_VIEWS = ['login', 'create-account', 'forgot-password', 'reset-password', 'send-confirmation', 'edit-password'];
 
@@ -38,6 +39,12 @@ const oktaSignInConfig = {
     // you will need to uncomment the below line
     // pkce: false
   },
+  i18n: {
+    en: {
+      // Labels
+      'primaryauth.username.placeholder': 'Email',
+    }
+}
 };
 
 const OktaSignInWidget = ({ config, onSuccess, onError }) => {
